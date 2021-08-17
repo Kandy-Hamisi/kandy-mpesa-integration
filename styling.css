@@ -1,0 +1,34 @@
+.title{
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.mpesa-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-section{
+    display: flex;
+    justify-content: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+.form-control{
+    margin: 1em 0;
+    padding: 0.9em 5px;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+
+.btn-mine{
+    padding: 10px 5px;
+    background-color: #a1b699;
+}
