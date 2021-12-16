@@ -46,7 +46,7 @@ if (isset($_POST['pay'])) {
     
 
     // callback url
-    $callBackUrl = "https://morning-basin-87523.herokuapp.com/callback_url.php";
+    $callBackUrl = "https://foodapkandy.herokuapp.com/callback_url.php";
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
