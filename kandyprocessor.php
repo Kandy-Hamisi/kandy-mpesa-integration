@@ -46,11 +46,14 @@ if (isset($_POST['pay'])) {
     
 
     // callback url
-    $callBackUrl = "https://foodapkandy.herokuapp.com/callback_url.php";
+    $callBackUrl = "https://60a8b840129d.ngrok.io/callback";
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+    // added the line below
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    // ........................
     curl_setopt($curl, CURLOPT_HEADER, FALSE);
     curl_setopt($curl, CURLOPT_USERPWD, $consumer_key.':'.$consumer_secret);
     $result = curl_exec($curl);
