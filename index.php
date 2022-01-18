@@ -12,7 +12,7 @@
         <h1 class="title">Mpesa integration with PHP</h1>
     </header>
     <section class="form-section">
-        <form action="./kandyprocessor.php" class="form" role="form" method="POST">
+        <form action="process.php" class="form" role="form" method="POST">
             <div class="form-group">
                 <label for="name">Full name</label>
                 <input type="text" name="fullname" id="" class="form-control" placeholder="Enter your full name">

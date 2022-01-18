@@ -46,7 +46,7 @@ if (isset($_POST['pay'])) {
     
 
     // callback url
-    $callBackUrl = "https://webhook.site/4dfd6470-d3ba-4f38-a5d3-abf7ebf51b47";
+    $callBackUrl = "http://9bfa-197-248-157-159.ngrok.io/kandy-mpesa-integration/kandy-processor.php";
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -63,11 +63,11 @@ if (isset($_POST['pay'])) {
     curl_close($curl);
 
     // header for stk push
-    $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
+    $stkheader = ['Authorization:Bearer '.$access_token, 'Content-Type:application/json'];
 
     // initiating the transaction
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $init_url);
+    $curl = curl_init($init_url);
+    // curl_setopt($curl, CURLOPT_URL, $init_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
 
     // fill in the parameters with valid values
